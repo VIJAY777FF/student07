@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loom Saree Store</title>
     <style>
-        body {
+             body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -216,7 +216,7 @@
         <nav class="nav-links">
             <a href="#home" onclick="scrollToSection(event, 'home')">Home</a>
             <a href="#shop" onclick="scrollToSection(event, 'shop')">Shop</a>
-            <a href="#about" onclick="scrollToSection(event, 'about')">About Us</a>
+                        <a href="#about" onclick="scrollToSection(event, 'about')">About Us</a>
             <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
         </nav>
     </header>
@@ -224,28 +224,28 @@
     <main class="main-content" id="home">
         <h1>Welcome to Our Loom Saree Store</h1>
         <div class="product">
-            <img width="100" height="100" src="blog-Cover.jpg" alt="saree no-1">
-            <h3>saree no-1</h3>
+            <img src="images/blog-Cover.jpg" alt="Saree No. 1">
+            <h3>Saree No. 1</h3>
             <p>$2000</p>
-            <button class="buy-now-btn" onclick="openModal('Product 1', 29.99)">Buy Now</button>
+            <button class="buy-now-btn" onclick="openModal('Saree No. 1', 2000)">Buy Now</button>
         </div>
         <div class="product">
-            <img width=100 height="50" src="silk-sarees-1720768865-7518128.jpeg" alt="saree no-2">
-            <h3>saree no-2</h3>
+            <img src="images/silk-sarees-1720768865-7518128.jpeg" alt="Saree No. 2">
+            <h3>Saree No. 2</h3>
             <p>$2000</p>
-            <button class="buy-now-btn" onclick="openModal('Product 2', 39.99)">Buy Now</button>
+            <button class="buy-now-btn" onclick="openModal('Saree No. 2', 2000)">Buy Now</button>
         </div>
         <!-- Add more products as needed -->
     </main>
 
     <section id="about" class="section">
         <h2>About Us</h2>
-        <p>Welcome to our Loom Saree Store! We are passionate about providing high-quality, fashionable saree's at affordable prices. Our goal is to offer a wide range of products that cater to all styles and preferences. Our dedicated team works hard to ensure that every item in our store meets the highest standards of quality and design. Thank you for choosing us for your fashion needs!</p>
+        <p>Welcome to our Loom Saree Store! We are passionate about providing high-quality, fashionable sarees at affordable prices. Our goal is to offer a wide range of products that cater to all styles and preferences. Our dedicated team works hard to ensure that every item in our store meets the highest standards of quality and design. Thank you for choosing us for your fashion needs!</p>
     </section>
 
     <section id="contact" class="section">
         <h2>Contact Us</h2>
-        <p>If you have any questions, feedback, or inquiries, please feel free to reach out to us. You can contact us via email at <a href="simhamkumar9949@gmail.com">simhamkumar9949@gmail.com</a> or call us at +91 8309902307/994920365. We look forward to hearing from you and assisting you with any concerns you may have.</p>
+        <p>If you have any questions, feedback, or inquiries, please feel free to reach out to us. You can contact us via email at <a href="mailto:simhamkumar9949@gmail.com">simhamkumar9949@gmail.com</a> or call us at +91 8309902307/994920365. We look forward to hearing from you and assisting you with any concerns you may have.</p>
     </section>
 
     <!-- Modal -->
@@ -264,8 +264,8 @@
                 <input type="tel" id="mobile" name="mobile" required>
                 <label for="quantity">Quantity:</label>
                 <input type="number" id="quantity" name="quantity" min="1" required>
-                <label for="saree number">saree number</label>
-                <input type="number" id="saree number" name="saree number" min="1" required>
+                <label for="saree-number">Saree Number:</label>
+                <input type="number" id="saree-number" name="saree-number" min="1" required>
                 <button type="submit">Submit Order</button>
             </form>
         </div>
@@ -274,26 +274,19 @@
     <script>
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
-            if (navLinks.classList.contains('show')) {
-                navLinks.classList.remove('show');
-                navLinks.classList.add('hide');
-            } else {
-                navLinks.classList.remove('hide');
-                navLinks.classList.add('show');
-            }
+            navLinks.classList.toggle('show');
         }
 
         function scrollToSection(event, sectionId) {
             event.preventDefault();
             const section = document.getElementById(sectionId);
             section.scrollIntoView({ behavior: 'smooth' });
-            closeMenu(); // Close the menu when an item is clicked
+            closeMenu();
         }
 
         function closeMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.remove('show');
-            navLinks.classList.add('hide');
         }
 
         function openModal(productName, productPrice) {
@@ -305,8 +298,8 @@
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
         }
-
-       
     </script>
 </body>
 </html>
+
+
